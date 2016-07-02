@@ -23,9 +23,12 @@ module.exports = function() {
           selector: '.tn-boxsty',
           callback: function(err, html, url, response){
             const movies = _.map(html.find('.tn-bxitem > a'), node => {
+              const span = _.find(node.children, el => el.name === 'span');
+              const image = _.find(span.children, el => el.name === 'img');
               return {
                 link: `${urlRemote}${node.attribs.href}`,
-                title: node.attribs.title
+                title: node.attribs.title,
+                image: image.attribs.src
               }
             });
             resolve(movies);
