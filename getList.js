@@ -13,6 +13,7 @@ if (process.env && process.env.ENDPOINT_URL) {
 
 module.exports = function() {
   return new Promise((resolve, reject) => {
+    let result = [];
     const crawler = {
       interval: 1000,
       getSample: urlRemote,
@@ -31,7 +32,11 @@ module.exports = function() {
                 image: image.attribs.src
               }
             });
-            resolve(movies);
+
+            result.push(movies);
+          },
+          done: () => {
+            resolve(result);
           }
         }
       ]

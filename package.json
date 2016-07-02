@@ -12,7 +12,7 @@
   "dependencies": {
     "atob": "^2.0.3",
     "bluebird": "^3.4.1",
-    "crawler-js": "^2.0.1",
+    "crawler-js": "github:khanghoang/crawlerjs",
     "express": "^4.14.0",
     "lodash": "^4.13.1"
   },
