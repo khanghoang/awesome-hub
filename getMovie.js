@@ -1,9 +1,11 @@
+'use strict';
 const Promise = require('bluebird');
 const crawlerjs = require('crawler-js');
 const _ = require('lodash');
 
 module.exports = function(remoteURL) {
   return new Promise((resolve, reject) => {
+    let testRE = '';
     const crawler = {
       interval: 1000,
       getSample: remoteURL,
@@ -14,7 +16,9 @@ module.exports = function(remoteURL) {
           selector: '#viewplayer',
           callback: function(err, html, url, response){
             const regex = /sources:(.*)]\,/;
-            var testRE = response.body.match(regex);
+            testRE = response.body.match(regex);
+          },
+          done: () => {
             resolve(eval(testRE[1] + ']'));
           }
         }
