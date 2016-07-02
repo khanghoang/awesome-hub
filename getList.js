@@ -1,12 +1,12 @@
-const Promise = require('bluebird');
-const crawlerjs = require('crawler-js');
-const _ = require('lodash');
+var Promise = require('bluebird');
+var crawlerjs = require('crawler-js');
+var _ = require('lodash');
 
-let urlRemote = '';
-if (process.ENV.ENDPOINT_URL) {
+var urlRemote = '';
+if (process.ENV && process.ENV.ENDPOINT_URL) {
   urlRemote = process.ENV.ENDPOINT_URL;
-} esle {
-  const config = require('./env');
+} else {
+  var config = require('./env');
   urlRemote = config.ENDPOINT_URL;
 }
 
