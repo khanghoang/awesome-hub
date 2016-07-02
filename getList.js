@@ -4,8 +4,8 @@ const crawlerjs = require('crawler-js');
 const _ = require('lodash');
 
 let urlRemote = '';
-if (process.ENV && process.ENV.ENDPOINT_URL) {
-  urlRemote = process.ENV.ENDPOINT_URL;
+if (process.env && process.env.ENDPOINT_URL) {
+  urlRemote = process.env.ENDPOINT_URL;
 } else {
   const config = require('./env');
   urlRemote = config.ENDPOINT_URL;
