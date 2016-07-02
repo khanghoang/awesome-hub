@@ -33,7 +33,7 @@ module.exports = function() {
               }
             });
 
-            result.push(movies);
+            result.push(...movies);
           },
           done: () => {
             resolve(result);
