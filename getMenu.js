@@ -24,8 +24,9 @@ module.exports = function() {
           selector: '.gnavsub',
           callback: function(err, html, url, response){
             const menuItems = _.map(html.find('li > a'), node => {
+            const url = node.attribs.href.toString().slice(1);
               return {
-                link: `${urlRemote}${node.attribs.href}`,
+                link: url,
                 title: _.get(node, 'children[0].data', 'Undefined')
               }
             });
