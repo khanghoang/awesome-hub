@@ -11,13 +11,14 @@ if (process.env && process.env.ENDPOINT_URL) {
   urlRemote = config.ENDPOINT_URL;
 }
 
-module.exports = function() {
+module.exports = function(url) {
+  let finalUrl = url ? `${urlRemote}${url}` : urlRemote;
   return new Promise((resolve, reject) => {
     let result = [];
     const crawler = {
       interval: 1000,
-      getSample: urlRemote,
-      get: urlRemote,
+      getSample: finalUrl,
+      get: finalUrl,
       preview: 0,
       extractors: [
         {

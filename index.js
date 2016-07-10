@@ -24,7 +24,8 @@ app.get('/getMovie', function (req, res) {
 });
 
 app.get('/getList', function (req, res) {
-  getList()
+  const url = req.query.url;
+  getList(url)
   .then(data => {
     res.status(200).json({movies: data});
   })
