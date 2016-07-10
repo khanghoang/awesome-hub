@@ -21,22 +21,19 @@ module.exports = function() {
       preview: 0,
       extractors: [
         {
-          selector: '.tn-bxitem',
+          selector: '.gnavsub',
           callback: function(err, html, url, response){
-            const movies = _.map(html.find('a'), node => {
-              const span = _.find(node.children, el => el.name === 'span');
-              const image = _.find(span.children, el => el.name === 'img');
+            const menuItems = _.map(html.find('li > a'), node => {
               return {
                 link: `${urlRemote}${node.attribs.href}`,
-                title: node.attribs.title,
-                image: image.attribs.src
+                title: _.get(node, 'children[0].data', 'Undefined')
               }
             });
 
-            result.push(...movies);
+            result.push(...menuItems);
           },
           done: () => {
-            resolve(_.unionBy(result, m => m.title));
+            resolve(result);
           }
         }
       ]
