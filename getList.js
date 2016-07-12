@@ -24,17 +24,19 @@ module.exports = function(url) {
         {
           selector: '.tn-bxitem',
           callback: function(err, html, url, response){
-            const movies = _.map(html.find('a'), node => {
-              const span = _.find(node.children, el => el.name === 'span');
-              const image = _.find(span.children, el => el.name === 'img');
-              return {
-                link: `${urlRemote}${node.attribs.href}`,
-                title: node.attribs.title,
-                image: image.attribs.src
-              }
-            });
+            if (html) {
+              const movies = _.map(html.find('a'), node => {
+                const span = _.find(node.children, el => el.name === 'span');
+                const image = _.find(span.children, el => el.name === 'img');
+                return {
+                  link: `${urlRemote}${node.attribs.href}`,
+                  title: node.attribs.title,
+                  image: image.attribs.src
+                }
+              });
 
-            result.push(...movies);
+              result.push(...movies);
+            }
           },
           done: () => {
             resolve(_.unionBy(result, m => m.title));
