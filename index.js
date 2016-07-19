@@ -4,6 +4,7 @@ const atob = require('atob');
 const getMovie = require('./getMovie');
 const getList = require('./getList');
 const getMenu = require('./getMenu');
+const redisStorage = require('./redis.js');
 
 GLOBAL.window = {
   atob: atob
@@ -14,13 +15,26 @@ var app = express();
 
 app.get('/getMovie', function (req, res) {
   const remote = req.query.url;
-  getMovie(remote)
-  .then(data => {
-    res.status(200).json({movie: data});
-  })
-  .catch(err => {
-    res.status(500).json({error: err})
-  })
+  redisStorage.getMovieWithUrl(remote)
+    .then(data => {
+      if (data) {
+        res.status(200).json({movie: data});
+        return data;
+      } else {
+        return getMovie(remote)
+          .then(data => {
+            return redisStorage.saveMovieDataWithUrl(remote, data).then(() => {
+              return data;
+            });
+          })
+          .then(data => {
+            res.status(200).json({movie: data});
+          })
+      }
+    })
+    .catch(err => {
+      res.status(500).json({error: err})
+    })
 });
 
 app.get('/getList', function (req, res) {
