@@ -15,25 +15,14 @@ var app = express();
 
 app.get('/getMovie', function (req, res) {
   const remote = req.query.url;
-  redisStorage.getMovieWithUrl(remote)
+  getMovie(remote)
     .then(data => {
-      if (data) {
-        res.status(200).json({movie: data});
+      return redisStorage.saveMovieDataWithUrl(remote, data).then(() => {
         return data;
-      } else {
-        return getMovie(remote)
-          .then(data => {
-            return redisStorage.saveMovieDataWithUrl(remote, data).then(() => {
-              return data;
-            });
-          })
-          .then(data => {
-            res.status(200).json({movie: data});
-          })
-      }
+      });
     })
-    .catch(err => {
-      res.status(500).json({error: err})
+    .then(data => {
+      res.status(200).json({movie: data});
     })
 });
 
