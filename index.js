@@ -39,7 +39,8 @@ app.get('/getMovie', function (req, res) {
 
 app.get('/getList', function (req, res) {
   const url = req.query.url;
-  getList(url)
+  const page = req.query.page || 1;
+  getList(url, page)
   .then(data => {
     res.status(200).json({movies: data});
   })
