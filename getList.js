@@ -12,7 +12,7 @@ if (process.env && process.env.ENDPOINT_URL) {
 }
 
 module.exports = function(url, page = 1) {
-  let finalUrl = url ? `${urlRemote}${url}&page=${page}` : urlRemote;
+  let finalUrl = url ? `${urlRemote}${url}/page-${page}/` : urlRemote;
   return new Promise((resolve, reject) => {
     let result = [];
     const crawler = {
