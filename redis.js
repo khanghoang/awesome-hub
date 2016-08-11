@@ -6,18 +6,18 @@ bluebird.promisifyAll(redis.RedisClient.prototype);
 bluebird.promisifyAll(redis.Multi.prototype);
 
 const client = redis.createClient({
-  url: process.env.REDIS_URL || null
+  url: process.env.REDIS_URL || null,
 });
-client.on("error", function (err) {
-  console.log("Error " + err);
+client.on('error', function (err) {
+  console.log('Error ' + err);
 });
 module.exports = {
-  saveMovieDataWithUrl: function(url, data) {
+  saveMovieDataWithUrl(url, data) {
     const strData = JSON.stringify(data);
     return client.setAsync(url, strData);
   },
 
-  getMovieWithUrl: function(url) {
+  getMovieWithUrl(url) {
     return client.getAsync(url);
-  }
-}
+  },
+};

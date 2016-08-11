@@ -2,19 +2,15 @@
 const Promise = require('bluebird');
 const crawlerjs = require('crawler-js');
 const _ = require('lodash');
+const getUrlRemote = require('./getRemoteURL');
 
-let urlRemote = '';
-if (process.env && process.env.ENDPOINT_URL) {
-  urlRemote = process.env.ENDPOINT_URL;
-} else {
-  const config = require('./env');
-  urlRemote = config.ENDPOINT_URL;
-}
+const urlRemote = getUrlRemote();
 
-module.exports = function(url, page = 1) {
-  let finalUrl = url ? `${urlRemote}${url}/page-${page}/` : urlRemote;
-  return new Promise((resolve, reject) => {
-    let result = [];
+// eslint-disable-next-line immutable/no-mutation
+module.exports = function (url, page = 1) {
+  const finalUrl = url ? `${urlRemote}${url}/page-${page}/` : urlRemote;
+  return new Promise((resolve) => {
+    const result = [];
     const crawler = {
       interval: 1000,
       getSample: finalUrl,
@@ -23,7 +19,7 @@ module.exports = function(url, page = 1) {
       extractors: [
         {
           selector: '.tn-bxitem',
-          callback: function(err, html, url, response){
+          callback(err, html) {
             if (html) {
               const movies = _.map(html.find('a'), node => {
                 const span = _.find(node.children, el => el.name === 'span');
@@ -31,8 +27,8 @@ module.exports = function(url, page = 1) {
                 return {
                   link: `${urlRemote}${node.attribs.href}`,
                   title: node.attribs.title,
-                  image: image.attribs.src
-                }
+                  image: image.attribs.src,
+                };
               });
 
               result.push(...movies);
@@ -40,10 +36,10 @@ module.exports = function(url, page = 1) {
           },
           done: () => {
             resolve(_.unionBy(result, m => m.title));
-          }
-        }
-      ]
-    }
+          },
+        },
+      ],
+    };
     crawlerjs(crawler, {});
-  })
-}
+  });
+};
