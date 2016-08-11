@@ -2,7 +2,8 @@ const atob = require('atob');
 const getMovie = require('./getMovie');
 const getList = require('./getList');
 const getMenu = require('./getMenu');
-const redisStorage = require('./redis.js');
+const redisStorage = require('./redis');
+const search = require('./search');
 
 // eslint-disable-next-line immutable/no-mutation
 GLOBAL.window = {
@@ -47,4 +48,21 @@ app.get('/getMenu', (req, res) => {
 
 app.listen(process.env.PORT || 3000, () => {
   console.log('Example app listening on port 3000!');
+});
+
+app.get('/search', (req, res) => {
+  const keyword = req.query.q;
+  const page = req.query.page || 1;
+  if (!keyword) {
+    res.status(401).json({ errorMessage: 'No keyword found' });
+    return;
+  }
+
+  search(keyword, page)
+  .then(data => {
+    res.status(200).json({ movies: data });
+  })
+  .catch(err => {
+    res.status(500).json({ error: err });
+  });
 });
