@@ -1,11 +1,12 @@
-const getUrlRemote = () => {
-  if (process.env && process.env.ENDPOINT_URL) {
-    return process.env.ENDPOINT_URL;
+const getUrlRemote = (name = 'ENDPOINT_URL') => {
+  if (process.env && process.env[name]) {
+    return process.env[name];
   }
 
   // eslint-disable-next-line global-require
-  const config = require('./env');
-  return config.ENDPOINT_URL;
+  const config = require('dotenv').config();
+	console.log(config);
+  return config[name];
 };
 
 // eslint-disable-next-line immutable/no-mutation
