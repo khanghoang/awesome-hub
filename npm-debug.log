@@ -1,0 +1,140 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/khanghoang/.nvm/versions/node/v6.5.0/bin/node',
+1 verbose cli   '/Users/khanghoang/.nvm/versions/node/v6.5.0/bin/npm',
+1 verbose cli   'shrinkwrap' ]
+2 info using npm@3.10.3
+3 info using node@v6.5.0
+4 info lifecycle hub@0.0.1~preshrinkwrap: hub@0.0.1
+5 silly lifecycle hub@0.0.1~preshrinkwrap: no script for preshrinkwrap, continuing
+6 warn shrinkwrap Excluding devDependency: crawler-js@2.0.1 { atob: '^2.0.3',
+6 warn shrinkwrap   bluebird: '^3.4.1',
+6 warn shrinkwrap   'crawler-js': 'github:khanghoang/crawlerjs',
+6 warn shrinkwrap   dotenv: '^2.0.0',
+6 warn shrinkwrap   express: '^4.14.0',
+6 warn shrinkwrap   fibrous: '^0.4.0',
+6 warn shrinkwrap   lodash: '^4.13.1',
+6 warn shrinkwrap   'node-fetch': '^1.6.3',
+6 warn shrinkwrap   'parse-json': '^2.2.0',
+6 warn shrinkwrap   redis: '^2.6.2',
+6 warn shrinkwrap   superagent: '^2.2.0' }
+7 info lifecycle hub@0.0.1~shrinkwrap: hub@0.0.1
+8 silly lifecycle hub@0.0.1~shrinkwrap: no script for shrinkwrap, continuing
+9 verbose stack Error: Problems were encountered
+9 verbose stack Please correct and try again.
+9 verbose stack invalid: have crawler-js@2.0.1 (expected: github:khanghoang/crawlerjs) /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/crawler-js
+9 verbose stack extraneous: asn1@0.1.11 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/asn1
+9 verbose stack extraneous: assert-plus@0.1.5 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/assert-plus
+9 verbose stack extraneous: aws-sign2@0.5.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/aws-sign2
+9 verbose stack extraneous: boom@0.4.2 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/boom
+9 verbose stack extraneous: bson@1.0.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/bson
+9 verbose stack extraneous: cheerio@0.13.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/cheerio
+9 verbose stack extraneous: cryptiles@0.2.2 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/cryptiles
+9 verbose stack extraneous: CSSselect@0.4.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/CSSselect
+9 verbose stack extraneous: domutils@1.4.3 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/CSSselect/node_modules/domutils
+9 verbose stack extraneous: CSSwhat@0.4.7 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/CSSwhat
+9 verbose stack extraneous: csvtojson@0.3.11 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/csvtojson
+9 verbose stack extraneous: ctype@0.5.3 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/ctype
+9 verbose stack extraneous: domelementtype@1.3.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/domelementtype
+9 verbose stack extraneous: domhandler@2.2.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/domhandler
+9 verbose stack extraneous: domutils@1.3.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/domutils
+9 verbose stack extraneous: entities@0.5.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/entities
+9 verbose stack extraneous: es6-promise@3.2.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/es6-promise
+9 verbose stack extraneous: forever-agent@0.5.2 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/forever-agent
+9 verbose stack extraneous: hawk@1.0.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/hawk
+9 verbose stack extraneous: hoek@0.9.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/hoek
+9 verbose stack extraneous: htmlparser2@3.4.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/htmlparser2
+9 verbose stack extraneous: isarray@0.0.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/htmlparser2/node_modules/isarray
+9 verbose stack extraneous: readable-stream@1.1.13 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/htmlparser2/node_modules/readable-stream
+9 verbose stack extraneous: http-signature@0.10.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/http-signature
+9 verbose stack extraneous: jquery-deferred@0.3.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/jquery-deferred
+9 verbose stack extraneous: json-stringify-safe@5.0.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/json-stringify-safe
+9 verbose stack extraneous: mongodb@2.2.16 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/mongodb
+9 verbose stack extraneous: readable-stream@2.1.5 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/mongodb/node_modules/readable-stream
+9 verbose stack extraneous: mongodb-core@2.1.2 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/mongodb-core
+9 verbose stack extraneous: mongoq@0.2.3 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/mongoq
+9 verbose stack extraneous: node-uuid@1.4.7 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/node-uuid
+9 verbose stack extraneous: oauth-sign@0.3.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/oauth-sign
+9 verbose stack extraneous: punycode@1.4.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/punycode
+9 verbose stack extraneous: querystring@0.2.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/querystring
+9 verbose stack extraneous: request@2.34.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/request
+9 verbose stack extraneous: async@0.9.2 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/request/node_modules/async
+9 verbose stack extraneous: combined-stream@0.0.7 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/request/node_modules/combined-stream
+9 verbose stack extraneous: delayed-stream@0.0.5 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/request/node_modules/delayed-stream
+9 verbose stack extraneous: form-data@0.1.4 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/request/node_modules/form-data
+9 verbose stack extraneous: mime@1.2.11 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/request/node_modules/mime
+9 verbose stack extraneous: qs@0.6.6 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/request/node_modules/qs
+9 verbose stack extraneous: require_optional@1.0.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/require_optional
+9 verbose stack extraneous: resolve-from@2.0.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/resolve-from
+9 verbose stack extraneous: semver@5.3.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/semver
+9 verbose stack extraneous: sntp@0.2.4 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/sntp
+9 verbose stack extraneous: tough-cookie@2.3.2 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/tough-cookie
+9 verbose stack extraneous: tunnel-agent@0.3.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/tunnel-agent
+9 verbose stack extraneous: underscore@1.5.2 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/underscore
+9 verbose stack     at shrinkwrap_ (/Users/khanghoang/.nvm/versions/node/v6.5.0/lib/node_modules/npm/lib/shrinkwrap.js:118:15)
+9 verbose stack     at Array.<anonymous> (/Users/khanghoang/.nvm/versions/node/v6.5.0/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+9 verbose stack     at LOOP (/Users/khanghoang/.nvm/versions/node/v6.5.0/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+9 verbose stack     at /Users/khanghoang/.nvm/versions/node/v6.5.0/lib/node_modules/npm/node_modules/slide/lib/chain.js:18:7
+9 verbose stack     at done (/Users/khanghoang/.nvm/versions/node/v6.5.0/lib/node_modules/npm/lib/utils/lifecycle.js:129:5)
+9 verbose stack     at LOOP (/Users/khanghoang/.nvm/versions/node/v6.5.0/lib/node_modules/npm/node_modules/slide/lib/chain.js:7:26)
+9 verbose stack     at /Users/khanghoang/.nvm/versions/node/v6.5.0/lib/node_modules/npm/node_modules/slide/lib/chain.js:18:7
+9 verbose stack     at /Users/khanghoang/.nvm/versions/node/v6.5.0/lib/node_modules/npm/lib/utils/lifecycle.js:281:20
+9 verbose stack     at FSReqWrap.oncomplete (fs.js:123:15)
+10 verbose cwd /Users/khanghoang/Documents/petProjects/awesome-hub
+11 error Darwin 15.6.0
+12 error argv "/Users/khanghoang/.nvm/versions/node/v6.5.0/bin/node" "/Users/khanghoang/.nvm/versions/node/v6.5.0/bin/npm" "shrinkwrap"
+13 error node v6.5.0
+14 error npm  v3.10.3
+15 error Problems were encountered
+15 error Please correct and try again.
+15 error invalid: have crawler-js@2.0.1 (expected: github:khanghoang/crawlerjs) /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/crawler-js
+15 error extraneous: asn1@0.1.11 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/asn1
+15 error extraneous: assert-plus@0.1.5 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/assert-plus
+15 error extraneous: aws-sign2@0.5.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/aws-sign2
+15 error extraneous: boom@0.4.2 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/boom
+15 error extraneous: bson@1.0.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/bson
+15 error extraneous: cheerio@0.13.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/cheerio
+15 error extraneous: cryptiles@0.2.2 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/cryptiles
+15 error extraneous: CSSselect@0.4.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/CSSselect
+15 error extraneous: domutils@1.4.3 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/CSSselect/node_modules/domutils
+15 error extraneous: CSSwhat@0.4.7 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/CSSwhat
+15 error extraneous: csvtojson@0.3.11 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/csvtojson
+15 error extraneous: ctype@0.5.3 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/ctype
+15 error extraneous: domelementtype@1.3.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/domelementtype
+15 error extraneous: domhandler@2.2.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/domhandler
+15 error extraneous: domutils@1.3.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/domutils
+15 error extraneous: entities@0.5.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/entities
+15 error extraneous: es6-promise@3.2.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/es6-promise
+15 error extraneous: forever-agent@0.5.2 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/forever-agent
+15 error extraneous: hawk@1.0.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/hawk
+15 error extraneous: hoek@0.9.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/hoek
+15 error extraneous: htmlparser2@3.4.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/htmlparser2
+15 error extraneous: isarray@0.0.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/htmlparser2/node_modules/isarray
+15 error extraneous: readable-stream@1.1.13 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/htmlparser2/node_modules/readable-stream
+15 error extraneous: http-signature@0.10.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/http-signature
+15 error extraneous: jquery-deferred@0.3.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/jquery-deferred
+15 error extraneous: json-stringify-safe@5.0.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/json-stringify-safe
+15 error extraneous: mongodb@2.2.16 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/mongodb
+15 error extraneous: readable-stream@2.1.5 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/mongodb/node_modules/readable-stream
+15 error extraneous: mongodb-core@2.1.2 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/mongodb-core
+15 error extraneous: mongoq@0.2.3 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/mongoq
+15 error extraneous: node-uuid@1.4.7 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/node-uuid
+15 error extraneous: oauth-sign@0.3.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/oauth-sign
+15 error extraneous: punycode@1.4.1 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/punycode
+15 error extraneous: querystring@0.2.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/querystring
+15 error extraneous: request@2.34.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/request
+15 error extraneous: async@0.9.2 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/request/node_modules/async
+15 error extraneous: combined-stream@0.0.7 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/request/node_modules/combined-stream
+15 error extraneous: delayed-stream@0.0.5 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/request/node_modules/delayed-stream
+15 error extraneous: form-data@0.1.4 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/request/node_modules/form-data
+15 error extraneous: mime@1.2.11 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/request/node_modules/mime
+15 error extraneous: qs@0.6.6 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/request/node_modules/qs
+15 error extraneous: require_optional@1.0.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/require_optional
+15 error extraneous: resolve-from@2.0.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/resolve-from
+15 error extraneous: semver@5.3.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/semver
+15 error extraneous: sntp@0.2.4 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/sntp
+15 error extraneous: tough-cookie@2.3.2 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/tough-cookie
+15 error extraneous: tunnel-agent@0.3.0 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/tunnel-agent
+15 error extraneous: underscore@1.5.2 /Users/khanghoang/Documents/petProjects/awesome-hub/node_modules/underscore
+16 error If you need help, you may report this error at:
+16 error     <https://github.com/npm/npm/issues>
+17 verbose exit [ 1, true ]

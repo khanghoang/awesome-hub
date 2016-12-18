@@ -2,7 +2,6 @@ const atob = require('atob');
 const getMovie = require('./getMovie');
 const getList = require('./getList');
 const getMenu = require('./getMenu');
-const redisStorage = require('./redis');
 const search = require('./search');
 
 // eslint-disable-next-line immutable/no-mutation
@@ -16,11 +15,8 @@ const app = express();
 app.get('/getMovie', (req, res) => {
   const remote = req.query.url;
   getMovie(remote)
-    .then(data => (
-      redisStorage.saveMovieDataWithUrl(remote, data).then(() => data)
-    ))
     .then(data => {
-      res.status(200).json({ movie: data });
+      res.status(200).json({ movie: eval(data) });
     });
 });
 
