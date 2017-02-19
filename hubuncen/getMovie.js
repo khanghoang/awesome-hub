@@ -4,7 +4,7 @@ const crawlerjs = require('crawler-js');
 const _ = require('lodash');
 const request = require('superagent');
 
-const link = 'http://javuncen.me/watch/ipz-319-the-passion-sex-water-saki-laura-which-i-stare-and-feel-7447';
+const link = '';
 const regex = /sources:([\s\S]*)\],/;
 
 request.get(link)
